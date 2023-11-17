@@ -5,7 +5,7 @@
     <top-nav id="topmenu-container" class="topmenu-container" v-if="settingsStore.topNav" />
 
     <div class="right-menu">
-      <template v-if="appStore.device !== 'mobile'">
+      <!-- <template v-if="appStore.device !== 'mobile'">
         <header-search id="header-search" class="right-menu-item" />
 
         <el-tooltip content="源码地址" effect="dark" placement="bottom">
@@ -21,19 +21,19 @@
         <el-tooltip content="布局大小" effect="dark" placement="bottom">
           <size-select id="size-select" class="right-menu-item hover-effect" />
         </el-tooltip>
-      </template>
+      </template> -->
       <div class="avatar-container">
         <el-dropdown @command="handleCommand" class="right-menu-item hover-effect" trigger="click">
-          <div class="avatar-wrapper">
+          <div class="">
             <img :src="userStore.avatar" class="user-avatar" />
-            <el-icon><caret-bottom /></el-icon>
+            <el-icon><grid /></el-icon>
           </div>
           <template #dropdown>
             <el-dropdown-menu>
-              <router-link to="/user/profile">
+              <!-- <router-link to="/user/profile">
                 <el-dropdown-item>个人中心</el-dropdown-item>
-              </router-link>
-              <el-dropdown-item command="setLayout" v-if="settingsStore.showSettings">
+              </router-link> -->
+              <el-dropdown-item command="setLayout">
                 <span>布局设置</span>
               </el-dropdown-item>
               <el-dropdown-item divided command="logout">
@@ -140,7 +140,7 @@ function setLayout() {
     height: 100%;
     line-height: 50px;
     display: flex;
-
+    align-items: center;
     &:focus {
       outline: none;
     }
