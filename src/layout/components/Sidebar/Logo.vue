@@ -25,7 +25,7 @@ defineProps({
   }
 })
 
-const title = import.meta.env.VITE_APP_TITLE;
+const title = '审核系统';
 const settingsStore = useSettingsStore();
 const sideTheme = computed(() => settingsStore.sideTheme);
 </script>
@@ -54,18 +54,18 @@ const sideTheme = computed(() => settingsStore.sideTheme);
     width: 100%;
 
     & .sidebar-logo {
-      width: 32px;
-      height: 32px;
+      width: 36px;
+      height: 40px;
       vertical-align: middle;
-      margin-right: 12px;
+      margin-left: 12px;
     }
 
     & .sidebar-title {
-      display: inline-block;
+      // display: inline-block;
       margin: 0;
       color: #fff;
       font-weight: 600;
-      line-height: 50px;
+      line-height: 1px;
       font-size: 14px;
       font-family: Avenir, Helvetica Neue, Arial, Helvetica, sans-serif;
       vertical-align: middle;
